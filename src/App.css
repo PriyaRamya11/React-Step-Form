@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+.wizard {
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wizard__step {
+    /* Make all steps have the same width */
+    flex: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wizard__dot {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wizard__connector__left {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.wizard__connector__right {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wizard__number {
+    cursor: pointer;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 32px;
+    width: 32px;
+    color: white;
+
+    /* OPTIONAL: Spacing between it and connectors */
+    margin-left: 10px;
+    margin-right: 10px;
 }
